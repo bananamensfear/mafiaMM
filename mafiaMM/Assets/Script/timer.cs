@@ -9,6 +9,10 @@ public class timer : MonoBehaviour
     [SerializeField] Image cooldown;
     [SerializeField] bool coolingDown;
     [SerializeField] float waitTime = 30.0f;
+    [SerializeField] GameObject gameObjectPosiX;
+    [SerializeField] GameObject gameObjectPosiY;
+    [SerializeField] GameObject gameObject;
+
     float timer1;
     void Start()
     {
