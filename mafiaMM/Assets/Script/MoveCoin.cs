@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class MoveCoin : MonoBehaviour
 {
     [SerializeField] Transform spawn;
+    float money = 0;
     Rigidbody2D rb;
     Vector2 move = new Vector2(3, 0);
     CircleCollider2D collision;
@@ -25,8 +26,14 @@ public class MoveCoin : MonoBehaviour
         rb.velocity = move;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other) 
     {
-        
+        Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+        money += 0.1f;
+    }
+    
 }
