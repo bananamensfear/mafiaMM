@@ -22,7 +22,6 @@ public class timer : MonoBehaviour
     {
         
         cooldown.fillAmount -= 1.0f/timer1 * Time.deltaTime;
-        Debug.Log(timer1);
         if (cooldown.fillAmount <= 0f)
         {
             Instantiate(coin , transform.position, transform.rotation);

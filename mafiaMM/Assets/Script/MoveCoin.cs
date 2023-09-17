@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-
+using UnityEngine.UI;
+using TMPro;
 public class MoveCoin : MonoBehaviour
 {
     [SerializeField] Transform spawn;
@@ -11,8 +11,8 @@ public class MoveCoin : MonoBehaviour
     Vector2 move = new Vector2(3, 0);
     CircleCollider2D collision;
     [SerializeField] GameObject gameObject;
-
-    // Start is called before the first frame update
+    [SerializeField] TMP_Text MoneyDisplay;
+   
     void Start()
     {
         collision = GetComponent<CircleCollider2D>();
@@ -20,20 +20,23 @@ public class MoveCoin : MonoBehaviour
         transform.position = spawn.position;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         rb.velocity = move;
+        MoneyDisplay.text = money.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
         Destroy(gameObject);
+       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
         money += 0.1f;
+        Debug.Log(money);
     }
     
 }
