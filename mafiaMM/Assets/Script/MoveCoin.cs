@@ -10,8 +10,8 @@ public class MoveCoin : MonoBehaviour
     Rigidbody2D rb;
     Vector2 move = new Vector2(3, 0);
     CircleCollider2D collision;
-    [SerializeField] GameObject gameObject;
-    [SerializeField] TMP_Text MoneyDisplay;
+    [SerializeField] GameObject gameObj;
+    [SerializeField] TMP_Text moneyDisplay;
    
     void Start()
     {
@@ -24,19 +24,20 @@ public class MoveCoin : MonoBehaviour
     void Update()
     {
         rb.velocity = move;
-        MoneyDisplay.text = money.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        Destroy(gameObject);
+        Destroy(gameObj);
        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        Destroy(gameObj);
         money += 0.1f;
         Debug.Log(money);
+        moneyDisplay.text = "Money = " + money;
+
     }
     
 }

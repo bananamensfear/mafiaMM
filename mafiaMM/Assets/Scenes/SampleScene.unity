@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -616, y: 321}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431282672
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Money: Get Away'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -426.6468, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919694373}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e83ab632fc06a14ea5113a3a9e22651, type: 3}
   m_Name: 
@@ -1090,6 +1090,11 @@ MonoBehaviour:
   waitTime: 5
   coinStartingPos: {x: 0, y: 0, z: 0}
   coin: {fileID: 6775229880279312985, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
+--- !u!1 &1926204860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6775229880279312985, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
+  m_PrefabInstance: {fileID: 4751186960020706606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4751186960020706606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1167,7 +1172,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1919694376}
     - target: {fileID: 7906583342620714285, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
+      propertyPath: gameObj
+      value: 
+      objectReference: {fileID: 1926204860}
+    - target: {fileID: 7906583342620714285, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
       propertyPath: MoneyDisplay
+      value: 
+      objectReference: {fileID: 431282672}
+    - target: {fileID: 7906583342620714285, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
+      propertyPath: moneyDisplay
       value: 
       objectReference: {fileID: 431282672}
     m_RemovedComponents: []
