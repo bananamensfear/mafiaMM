@@ -27,7 +27,6 @@ public class timer : MonoBehaviour
     {
         money += MoneyCollect[coinLevel];
         moneyDisplay.text = "Money = " + money.ToString(".00");
-        Debug.Log(money);
     }
     void Update()
     {
