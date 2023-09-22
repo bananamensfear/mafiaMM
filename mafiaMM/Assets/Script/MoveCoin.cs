@@ -27,16 +27,17 @@ public class MoveCoin : MonoBehaviour
         rb.velocity = move;
     }
 
-     void OnCollisionEnter2D(Collision2D other) 
-    {
-        Destroy(gameObject);
-       
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-        Timer.AddMoney();
-
+        if(other.CompareTag("CoinCollector"))
+        {
+            Destroy(gameObject);
+            Timer.AddMoney();
+        }
+        else if(other.CompareTag("CoinDestroyer"))
+        {
+            Destroy(gameObject);
+        }
     }
     
 }
