@@ -31,8 +31,7 @@ public class MoveCoin : MonoBehaviour
     {
         if(other.CompareTag("CoinCollector"))
         {
-            Destroy(gameObject);
-            Timer.AddMoney();
+            Timer.AddMoney(gameObject);
         }
         else if(other.CompareTag("CoinDestroyer"))
         {

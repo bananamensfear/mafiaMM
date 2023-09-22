@@ -15,29 +15,51 @@ public class timer : MonoBehaviour
     float money = 0;
     public float[] MoneyCollect;
     int coinLevel;
-    
+    float coinSpawnTimer;
 
-    float timer1;
-    void Start()
+    [SerializeField] float collectCoinTimer;
+    [SerializeField] float workerCollectDelay;
+    [SerializeField] bool workerCanCollectCoin = true;
+
+    public void AddMoney(GameObject coin)
     {
-        float timer1 = waitTime;
-        
-    }
-    public void AddMoney()
-    {
-        money += MoneyCollect[coinLevel];
-        moneyDisplay.text = "Money = " + money.ToString(".00");
+        if(workerCanCollectCoin)
+        {
+            Destroy(coin);
+            money += MoneyCollect[coinLevel];
+            moneyDisplay.text = "Money = " + money.ToString(".00");
+            workerCanCollectCoin = false;
+        }
     }
     void Update()
     {
+        CoinSpawnerTimer();
 
-        cooldown.fillAmount -= 1.0f/timer1 * Time.deltaTime;
+        if(!workerCanCollectCoin)
+        {
+            WorkerCollectDelay();
+        }
+    }
+
+    void CoinSpawnerTimer()
+    {
+        cooldown.fillAmount -= 1.0f / coinSpawnTimer * Time.deltaTime;
         if (cooldown.fillAmount <= 0f)
         {
-            Instantiate(coin , transform.position, transform.rotation);
-            timer1 = waitTime;
+            Instantiate(coin, transform.position, transform.rotation);
+            coinSpawnTimer = waitTime;
             cooldown.fillAmount = 1.0f;
 
+        }
+    }
+
+    void WorkerCollectDelay()
+    {
+        collectCoinTimer += Time.deltaTime;
+        if( collectCoinTimer >= workerCollectDelay)
+        {
+            workerCanCollectCoin = true;
+            collectCoinTimer = 0;
         }
     }
 }

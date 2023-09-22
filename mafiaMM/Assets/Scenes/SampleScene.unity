@@ -1333,13 +1333,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: {fileID: 1335618914}
   coolingDown: 1
-  waitTime: 5
+  waitTime: 2
   coinStartingPos: {x: 0, y: 0, z: 0}
   coin: {fileID: 6775229880279312985, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
   moneyDisplay: {fileID: 431282672}
   MoneyCollect:
   - 0.1
   - 1
+  collectCoinTimer: 0
+  workerCollectDelay: 2
+  workerCanCollectCoin: 1
 --- !u!1 &1931725513
 GameObject:
   m_ObjectHideFlags: 0
