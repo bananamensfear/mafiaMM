@@ -58,6 +58,7 @@ public class timer : MonoBehaviour
     void WorkerCollectDelay()
     {
         collectCoinTimer -= Time.deltaTime;
+        workerTimerObject.enabled = true;
         workerTimerObject.fillAmount = collectCoinTimer / workerCollectDelay;
 
         if (collectCoinTimer < 0)
@@ -65,6 +66,7 @@ public class timer : MonoBehaviour
             workerCanCollectCoin = true;
             collectCoinTimer = workerCollectDelay;
             workerTimerObject.fillAmount = workerCollectDelay;
+            workerTimerObject.enabled = false;
         }
     }
 }
