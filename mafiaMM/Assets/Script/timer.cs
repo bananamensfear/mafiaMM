@@ -16,10 +16,11 @@ public class timer : MonoBehaviour
     public float[] MoneyCollect;
     int coinLevel;
     float coinSpawnTimer;
+    [SerializeField] Image timerForWorker;
 
     [SerializeField] float collectCoinTimer;
     [SerializeField] float workerCollectDelay;
-    [SerializeField] bool workerCanCollectCoin = true;
+    [SerializeField] bool workerCanCollectCoin ;
 
     public void AddMoney(GameObject coin)
     {
@@ -39,27 +40,31 @@ public class timer : MonoBehaviour
         {
             WorkerCollectDelay();
         }
+        
     }
 
     void CoinSpawnerTimer()
     {
+        workerCanCollectCoin = false;
         cooldown.fillAmount -= 1.0f / coinSpawnTimer * Time.deltaTime;
         if (cooldown.fillAmount <= 0f)
         {
             Instantiate(coin, transform.position, transform.rotation);
             coinSpawnTimer = waitTime;
             cooldown.fillAmount = 1.0f;
-
+            
         }
     }
 
     void WorkerCollectDelay()
     {
-        collectCoinTimer += Time.deltaTime;
-        if( collectCoinTimer >= workerCollectDelay)
+        timerForWorker.fillAmount -= 1.0f / workerCollectDelay * Time.deltaTime;
+        if( timerForWorker.fillAmount <= 0)
         {
             workerCanCollectCoin = true;
-            collectCoinTimer = 0;
+            timerForWorker.fillAmount = 1.0f;
+            
+
         }
     }
 }
