@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro ;
-
-public class Upgrades : MonoBehaviour
+[CreateAssetMenu(menuName = "Upgrades", fileName = "New Upgrade")]
+public class Upgrades : ScriptableObject 
 {
     [SerializeField] float[] TimeToRegeneratCoin;
     [SerializeField] float[] TimeForWorkerCoin;

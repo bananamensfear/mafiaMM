@@ -2221,7 +2221,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930960155}
-  - component: {fileID: 1930960156}
   m_Layer: 5
   m_Name: upgaradeParent
   m_TagString: Untagged
@@ -2252,32 +2251,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6.008, y: 8.0106}
   m_SizeDelta: {x: 112.016, y: 116.0212}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1930960156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930960154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3053dcd0801cfc14d903e2907f019bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToRegeneratCoin:
-  - 5
-  - 4
-  - 3
-  TimeForWorkerCoin:
-  - 6
-  - 5.5
-  - 5
-  - 4.5
-  - 4
-  ValueOfCoin:
-  - 0.01
-  - 0.1
-  - 0.25
 --- !u!1 &1931725513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2635,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1061.7, y: -1830.5}
+  m_AnchoredPosition: {x: -1061.7, y: 0}
   m_SizeDelta: {x: -393.92004, y: 112.410034}
   m_Pivot: {x: 1, y: 1}

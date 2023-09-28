@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3053dcd0801cfc14d903e2907f019bba, type: 3}
+  m_Name: UpgradeForMachine1
+  m_EditorClassIdentifier: 
+  TimeToRegeneratCoin:
+  - 5
+  - 4
+  - 0
+  - 0
+  - 0
+  TimeForWorkerCoin:
+  - 7
+  - 6
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  ValueOfCoin:
+  - 0.01
+  - 0.1
