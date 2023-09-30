@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToOpenUpgradeManue : MonoBehaviour
 {
     [SerializeField] GameObject objToTurnOff ;
+    int WhatMachienToUpgrade;
     void Start()
     {
         
@@ -16,6 +17,6 @@ public class ToOpenUpgradeManue : MonoBehaviour
     public void OpenUpgradeManu()
     {
         objToTurnOff.SetActive (true);
-
+        WhatMachienToUpgrade = 1;
     }
 }

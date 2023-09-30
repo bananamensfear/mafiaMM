@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class upgradesCode : MonoBehaviour
 {
-   //[SerializeField] Upgrade upgrade;
+   [SerializeField] Upgrades upgrade1;
     void Start()
     {
         
