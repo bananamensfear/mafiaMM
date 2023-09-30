@@ -42,6 +42,6 @@ MonoBehaviour:
   - 10
   - 30
   - 60
-  TimeToRegeneratCoinText: upgrade the time to regenerat coin
-  TimeForWorkerCoinText: upgrade time for worker to pick up coin
-  ValueOfCoinText: upgrade the value of the coin
+  TimeToRegeneratCoinText1: Time it takes to regenerat coin
+  TimeForWorkerCoinText1: Time for worker to take  a coin
+  ValueOfCoinText1: The valiu of coin

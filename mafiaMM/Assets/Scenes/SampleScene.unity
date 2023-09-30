@@ -3056,7 +3056,7 @@ MonoBehaviour:
   upgrade1CurrentOn: 0
   upgrade2CurrentOn: 0
   upgrade3CurrentOn: 0
-  upgrade1Text: {fileID: 371956739}
+  upgrade1Text: {fileID: 1923853999}
   upgrade2Text: {fileID: 1331255788}
   upgrade3Text: {fileID: 371956739}
 --- !u!1 &1931725513

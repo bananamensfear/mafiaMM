@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro ;
 [CreateAssetMenu(menuName = "Upgrades", fileName = "New Upgrade")]
-public class Upgrades : ScriptableObject 
+public class Upgrades : ScriptableObject
 {
     public float[] TimeToRegeneratCoin;
     public float[] TimeForWorkerCoin;
@@ -15,6 +15,16 @@ public class Upgrades : ScriptableObject
     public static string TimeToRegeneratCoinText;
     public static string TimeForWorkerCoinText;
     public static string ValueOfCoinText;
+    public string TimeToRegeneratCoinText1;
+    public string TimeForWorkerCoinText1;
+    public string ValueOfCoinText1;
+    void Start()
+    {
+        TimeToRegeneratCoinText = TimeToRegeneratCoinText1;
+        TimeForWorkerCoinText = TimeForWorkerCoinText1;
+        ValueOfCoinText = ValueOfCoinText1;
+        Debug.Log(ValueOfCoinText);
+    }
     public float upgradeMachineTime(int index)
     {
         return TimeToRegeneratCoin[index];
@@ -38,11 +48,15 @@ public class Upgrades : ScriptableObject
     public float UpgradeValueOfCoinCost(int index)
     {
         return ValueOfCoinCost[index];
+
     }
     public string allText()
     {
         return TimeToRegeneratCoinText;
         return TimeForWorkerCoinText;
         return ValueOfCoinText;
+        return TimeToRegeneratCoinText1;
+        return TimeForWorkerCoinText1;
+        return ValueOfCoinText1;
     }
 }
