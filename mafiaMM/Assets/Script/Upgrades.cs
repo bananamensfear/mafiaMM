@@ -6,15 +6,15 @@ using TMPro ;
 [CreateAssetMenu(menuName = "Upgrades", fileName = "New Upgrade")]
 public class Upgrades : ScriptableObject 
 {
-    [SerializeField] float[] TimeToRegeneratCoin;
-    [SerializeField] float[] TimeForWorkerCoin;
-    [SerializeField] float[] ValueOfCoin;
-    [SerializeField] float[] TimeToRegeneratCoinCost;
-    [SerializeField] float[] TimeForWorkerCoinCost;
-    [SerializeField] float[] ValueOfCoinCost;
-    [SerializeField] string TimeToRegeneratCoinText;
-    [SerializeField] string TimeForWorkerCoinText;
-    [SerializeField] string ValueOfCoinText;
+    public float[] TimeToRegeneratCoin;
+    public float[] TimeForWorkerCoin;
+    public float[] ValueOfCoin;
+    public float[] TimeToRegeneratCoinCost;
+    public float[] TimeForWorkerCoinCost;
+    public float[] ValueOfCoinCost;
+    public static string TimeToRegeneratCoinText;
+    public static string TimeForWorkerCoinText;
+    public static string ValueOfCoinText;
     public float upgradeMachineTime(int index)
     {
         return TimeToRegeneratCoin[index];
