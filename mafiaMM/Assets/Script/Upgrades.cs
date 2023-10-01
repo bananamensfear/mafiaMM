@@ -18,13 +18,7 @@ public class Upgrades : ScriptableObject
     public string TimeToRegeneratCoinText1;
     public string TimeForWorkerCoinText1;
     public string ValueOfCoinText1;
-    void Start()
-    {
-        TimeToRegeneratCoinText = TimeToRegeneratCoinText1;
-        TimeForWorkerCoinText = TimeForWorkerCoinText1;
-        ValueOfCoinText = ValueOfCoinText1;
-        Debug.Log(ValueOfCoinText);
-    }
+    
     public float upgradeMachineTime(int index)
     {
         return TimeToRegeneratCoin[index];

@@ -44,4 +44,4 @@ MonoBehaviour:
   - 60
   TimeToRegeneratCoinText1: Time it takes to regenerat coin
   TimeForWorkerCoinText1: Time for worker to take  a coin
-  ValueOfCoinText1: The valiu of coin
+  ValueOfCoinText1: The value of coin
