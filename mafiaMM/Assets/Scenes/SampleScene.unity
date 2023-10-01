@@ -3025,6 +3025,7 @@ MonoBehaviour:
   coinStartingPos: {x: 0, y: 0, z: 0}
   coin: {fileID: 6775229880279312985, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
   moneyDisplay: {fileID: 1233230040}
+  money: 1
   MoneyCollect:
   - 0.1
   - 1
@@ -3368,6 +3369,7 @@ MonoBehaviour:
   buttomUpgrade1Text: {fileID: 1519234023}
   buttomUpgrade2Text: {fileID: 1654691762}
   buttomUpgrade3Text: {fileID: 1680425877}
+  timerScript: {fileID: 1919694378}
 --- !u!1 &1931725513
 GameObject:
   m_ObjectHideFlags: 0

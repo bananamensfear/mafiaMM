@@ -11,8 +11,8 @@ public class timer : MonoBehaviour
     [SerializeField] float waitTime = 30.0f;
     [SerializeField] Vector3 coinStartingPos;
     [SerializeField] GameObject coin;
-    [SerializeField] TMP_Text moneyDisplay;
-    public static float money = 0;
+    public TextMeshProUGUI moneyDisplay;
+    public  float money ;
     public float[] MoneyCollect;
     int coinLevel;
     float coinSpawnTimer;
