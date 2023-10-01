@@ -19,4 +19,9 @@ public class ToOpenUpgradeManue : MonoBehaviour
         objToTurnOff.SetActive (true);
         WhatMachienToUpgrade = 1;
     }
+    public void CloseUpgradeManu()
+    {
+        objToTurnOff.SetActive(false);
+        WhatMachienToUpgrade = 1;
+    }
 }

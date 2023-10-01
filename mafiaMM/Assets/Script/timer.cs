@@ -12,7 +12,7 @@ public class timer : MonoBehaviour
     [SerializeField] Vector3 coinStartingPos;
     [SerializeField] GameObject coin;
     [SerializeField] TMP_Text moneyDisplay;
-    float money = 0;
+    public static float money = 0;
     public float[] MoneyCollect;
     int coinLevel;
     float coinSpawnTimer;

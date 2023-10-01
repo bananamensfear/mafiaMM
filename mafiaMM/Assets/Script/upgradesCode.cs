@@ -16,7 +16,8 @@ public class upgradesCode : MonoBehaviour
     public TextMeshProUGUI buttomUpgrade1Text;
     public TextMeshProUGUI buttomUpgrade2Text;
     public TextMeshProUGUI buttomUpgrade3Text;
-
+    [SerializeField] 
+     
     void Start()
     {
         
@@ -35,21 +36,33 @@ public class upgradesCode : MonoBehaviour
     }
     public void buttom1Upgrade()
     {
-        upgrade1CurrentOn += 1;
-        upgrade1Text.text = ($"{ upgrade1.TimeToRegeneratCoinText1}  { upgrade1CurrentOn} - {upgrade1CurrentOn + 1}");
-        buttomUpgrade1Text.text = ($"${upgrade1.TimeToRegeneratCoinCost[upgrade1CurrentOn]}");
+        if (timer.money >= upgrade1.TimeToRegeneratCoinCost[upgrade1CurrentOn])
+            {
+            upgrade1CurrentOn += 1;
+            upgrade1Text.text = ($"{ upgrade1.TimeToRegeneratCoinText1}  { upgrade1CurrentOn} - {upgrade1CurrentOn + 1}");
+            buttomUpgrade1Text.text = ($"${upgrade1.TimeToRegeneratCoinCost[upgrade1CurrentOn]}");
+        }
+            
     }
     public void buttom2Upgrade()
     {
-        upgrade2CurrentOn += 1;
-        upgrade2Text.text = ($"{ upgrade1.TimeForWorkerCoinText1}  { upgrade2CurrentOn} - {upgrade2CurrentOn + 1}");
-        buttomUpgrade2Text.text = ($"${upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn]}");
+        if (timer.money >= upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn])
+        {
+            upgrade2CurrentOn += 1;
+            upgrade2Text.text = ($"{ upgrade1.TimeForWorkerCoinText1}  { upgrade2CurrentOn} - {upgrade2CurrentOn + 1}");
+            buttomUpgrade2Text.text = ($"${upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn]}");
+        }
+        
     }
     public void buttom3Upgrade()
     {
-        upgrade3CurrentOn += 1;
-        upgrade3Text.text = ($"{ upgrade1.ValueOfCoinText1}  { upgrade3CurrentOn} - {upgrade3CurrentOn + 1}");
-        buttomUpgrade2Text.text = ($"${upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn]}");
-        buttomUpgrade3Text.text = ($"${upgrade1.ValueOfCoinCost[upgrade3CurrentOn]}");
+        if (timer.money >= upgrade1.ValueOfCoinCost[upgrade3CurrentOn])
+        {
+            upgrade3CurrentOn += 1;
+            upgrade3Text.text = ($"{ upgrade1.ValueOfCoinText1}  { upgrade3CurrentOn} - {upgrade3CurrentOn + 1}");
+            buttomUpgrade2Text.text = ($"${upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn]}");
+            buttomUpgrade3Text.text = ($"${upgrade1.ValueOfCoinCost[upgrade3CurrentOn]}");
+        }
+           
     }
 }
