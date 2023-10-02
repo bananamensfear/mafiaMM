@@ -16,21 +16,22 @@ public class timer : MonoBehaviour
     public float[] MoneyCollect;
     int coinLevel;
     float coinSpawnTimer;
-
     [SerializeField] float collectCoinTimer;
+    [SerializeField] Upgrades upgradeScript;
     [SerializeField] float workerCollectDelay;
     [SerializeField] bool workerCanCollectCoin = true;
     [SerializeField] Image workerTimerObject;
+    [SerializeField] upgradesCode upgradeCodeScript;
 
     public void AddMoney(GameObject coin)
     {
         if (workerCanCollectCoin)
         {
             Destroy(coin);
-            money += MoneyCollect[coinLevel];
+            money += upgradeScript.ValueOfCoin[upgradeCodeScript.upgrade3CurrentOn];
             moneyDisplay.text = "Money = " + money.ToString(".00");
             workerCanCollectCoin = false;
-            collectCoinTimer = workerCollectDelay;
+            
         }
     }
     void Update()
@@ -49,7 +50,7 @@ public class timer : MonoBehaviour
         if (cooldown.fillAmount <= 0f)
         {
             Instantiate(coin, transform.position, transform.rotation);
-            coinSpawnTimer = waitTime;
+            coinSpawnTimer = upgradeScript.TimeToRegeneratCoin[upgradeCodeScript.upgrade1CurrentOn];
             cooldown.fillAmount = 1.0f;
 
         }
@@ -57,15 +58,15 @@ public class timer : MonoBehaviour
 
     void WorkerCollectDelay()
     {
-        collectCoinTimer -= Time.deltaTime;
+        workerCollectDelay = upgradeScript.TimeForWorkerCoin[upgradeCodeScript.upgrade2CurrentOn];
         workerTimerObject.enabled = true;
-        workerTimerObject.fillAmount = collectCoinTimer / workerCollectDelay;
+        workerTimerObject.fillAmount -= 1.0f / upgradeScript.TimeForWorkerCoin[upgradeCodeScript.upgrade2CurrentOn] * Time.deltaTime;
 
-        if (collectCoinTimer < 0)
+        if (workerTimerObject.fillAmount <= 0)
         {
             workerCanCollectCoin = true;
-            collectCoinTimer = workerCollectDelay;
-            workerTimerObject.fillAmount = workerCollectDelay;
+        
+            workerTimerObject.fillAmount = 1;
             workerTimerObject.enabled = false;
         }
     }

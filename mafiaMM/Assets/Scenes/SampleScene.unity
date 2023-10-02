@@ -988,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4127, y: -634.56104}
+  m_AnchoredPosition: {x: -1.419, y: -634.56104}
   m_SizeDelta: {x: 1082.8, y: 988.9601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706416190
@@ -3020,19 +3020,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: {fileID: 1335618914}
-  coolingDown: 0
+  coolingDown: 1
   waitTime: 2
   coinStartingPos: {x: 0, y: 0, z: 0}
   coin: {fileID: 6775229880279312985, guid: 92225c026b37b094a98b6d66ab003215, type: 3}
   moneyDisplay: {fileID: 1233230040}
-  money: 1
+  money: 5
   MoneyCollect:
   - 0.1
   - 1
   collectCoinTimer: 5
+  upgradeScript: {fileID: 11400000, guid: add191b1af881444fa476ef286995551, type: 2}
   workerCollectDelay: 5
   workerCanCollectCoin: 1
   workerTimerObject: {fileID: 501411727}
+  upgradeCodeScript: {fileID: 1930960156}
 --- !u!1 &1923853997
 GameObject:
   m_ObjectHideFlags: 0
