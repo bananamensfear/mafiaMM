@@ -64,15 +64,12 @@ public class upgradesCode : MonoBehaviour
             upgrade2CurrentOn += 1;
             upgrade2Text.text = ($"{ upgrade1.TimeForWorkerCoinText1}  { upgrade2CurrentOn} - {upgrade2CurrentOn + 1}");
             buttomUpgrade2Text.text = ($"${upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn]}");
-            timerScript.money -= upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn];
+            timerScript.money -= upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn - 1];
+            timerScript.moneyDisplay.text = ($"Money =   { timerScript.money.ToString(".00")}");
             if (upgrade1.TimeForWorkerCoinCost[upgrade2CurrentOn+ 1] == 0)
             {
-                buttomUpgrade1Text.text = ("max upgrade");
-            }
-        }
-        else
-        {
             buttomUpgrade2Text.text = ("max upgrade");
+            }
         }
     }
     public void buttom3Upgrade()
@@ -83,17 +80,14 @@ public class upgradesCode : MonoBehaviour
             upgrade3Text.text = ($"{ upgrade1.ValueOfCoinText1}  { upgrade3CurrentOn} - {upgrade3CurrentOn + 1}");
             upgrade3Text.text = ($"{ upgrade1.TimeForWorkerCoinText1}  { upgrade3CurrentOn} - {upgrade3CurrentOn + 1}");
             buttomUpgrade3Text.text = ($"${upgrade1.ValueOfCoinCost[upgrade3CurrentOn]}");
-            timerScript.money -= upgrade1.ValueOfCoinCost[upgrade3CurrentOn];
+            timerScript.money -= upgrade1.ValueOfCoinCost[upgrade3CurrentOn - 1];
+            timerScript.moneyDisplay.text = ($"Money =   { timerScript.money.ToString(".00")}");
             if (upgrade1.ValueOfCoinCost[upgrade3CurrentOn+ 1] == 0)
             {
-                buttomUpgrade1Text.text = ("max upgrade");
-            }
-
-        }
-        else
-        {
             buttomUpgrade3Text.text = ("max upgrade");
+            }
         }
+        
            
     }
 }
